@@ -75,14 +75,14 @@ void Player::enforceStat(STATUS _enum)
 }
 void Player::defaultAttack()
 {
-	if (status[STATUS::MP] < 50)
+	if (status[STATUS::MP] < SKILL_MP)
 	{
 		std::cout << "스킬 사용이 불가합니다." << std::endl;
 		std::cout << "남은 MP 포션 수 : " << this->mpPotion << std::endl;
 		return;
 	}
-	status[STATUS::MP] -= 50;
-	std::cout << "스킬을 사용하여 MP가 50 소모되었습니다." << std::endl;
+	status[STATUS::MP] -= SKILL_MP;
+	std::cout << "스킬을 사용하여 MP가 " << SKILL_MP << "소모되었습니다." << std::endl;
 	std::cout << "현재 MP : " << status[STATUS::MP] << std::endl;
 
 	return;

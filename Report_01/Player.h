@@ -3,7 +3,7 @@
 #include <memory>
 #include <string>
 #define POTION_POWER 20
-#define SKILL_MP
+#define SKILL_MP 50
 
 enum STATUS
 {
